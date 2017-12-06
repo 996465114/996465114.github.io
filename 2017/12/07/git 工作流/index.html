@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://996465114.github.io">
-  <title>Archives: 2017 | outside blog</title>
+  <title>git 工作流 | outside blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="outside blog">
-<meta property="og:url" content="http://996465114.github.io/archives/2017/index.html">
+  <meta name="description" content="GIT 工作流分支介绍 master: 存放已部署在生产环境的稳定代码，以tag标记版本节点。 release: 发布分支，基于develop分支，用于体侧后修复bug，通常新功能不在此分支上开发。完成后合并到develp分支和master分支。 develop: 不直接在该分支上进行开发，用来合并feature分支的代码  git完整工作流正常流 接到版本需求 新建featrue分支（以版本号命">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 工作流">
+<meta property="og:url" content="http://996465114.github.io/2017/12/07/git 工作流/index.html">
 <meta property="og:site_name" content="outside blog">
+<meta property="og:description" content="GIT 工作流分支介绍 master: 存放已部署在生产环境的稳定代码，以tag标记版本节点。 release: 发布分支，基于develop分支，用于体侧后修复bug，通常新功能不在此分支上开发。完成后合并到develp分支和master分支。 develop: 不直接在该分支上进行开发，用来合并feature分支的代码  git完整工作流正常流 接到版本需求 新建featrue分支（以版本号命">
 <meta property="og:locale" content="chinese">
+<meta property="og:updated_time" content="2017-12-06T13:13:08.561Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="outside blog">
+<meta name="twitter:title" content="git 工作流">
+<meta name="twitter:description" content="GIT 工作流分支介绍 master: 存放已部署在生产环境的稳定代码，以tag标记版本节点。 release: 发布分支，基于develop分支，用于体侧后修复bug，通常新功能不在此分支上开发。完成后合并到develp分支和master分支。 develop: 不直接在该分支上进行开发，用来合并feature分支的代码  git完整工作流正常流 接到版本需求 新建featrue分支（以版本号命">
   
     <link rel="alternative" href="/atom.xml" title="outside blog" type="application/atom+xml">
   
@@ -150,205 +154,175 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-git 工作流" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git 工作流
+    </h1>
+  
+
+        
+        <a href="/2017/12/07/git 工作流/" class="archive-article-date">
+  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="GIT-工作流"><a href="#GIT-工作流" class="headerlink" title="GIT 工作流"></a>GIT 工作流</h1><h2 id="分支介绍"><a href="#分支介绍" class="headerlink" title="分支介绍"></a>分支介绍</h2><ul>
+<li>master: 存放已部署在生产环境的稳定代码，以tag标记版本节点。</li>
+<li>release: 发布分支，基于develop分支，用于体侧后修复bug，通常新功能不在此分支上开发。完成后合并到develp分支和master分支。</li>
+<li>develop: 不直接在该分支上进行开发，用来合并feature分支的代码</li>
+</ul>
+<h2 id="git完整工作流"><a href="#git完整工作流" class="headerlink" title="git完整工作流"></a>git完整工作流</h2><h3 id="正常流"><a href="#正常流" class="headerlink" title="正常流"></a>正常流</h3><ol>
+<li>接到版本需求</li>
+<li>新建featrue分支（以版本号命名分支），进入开发</li>
+<li>develop完成一个小功能，需合并到本地develop分支，再push到远程分支</li>
+<li>开发完成，准备体侧</li>
+<li>禁止feature分支提交代码，完成feature分支，合并代码到develop</li>
+<li>建立release分支（以版本号命名分支），在此分支上修复测试bug</li>
+<li>测试完成，发布版本</li>
+</ol>
+<h3 id="异常流"><a href="#异常流" class="headerlink" title="异常流"></a>异常流</h3><ol>
+<li>发现线上紧急bug</li>
+<li>从master检出release分支，在此分支上修复bug并提交测试</li>
+<li>测试完成，准备发布修复版本</li>
+<li>禁止release分支提交代码，完成release分支，将代码合并到develop分支和master分支，打上Tag</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/07/git 工作流/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/07/git 工作流/">git 工作流</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://996465114.github.io/2017/12/07/git 工作流/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/07/css编写规范/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/07/css编写规范/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css编写规范</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/07/css编写规范/">css编写规范</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/07/eslint配置与使用/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/07/eslint配置与使用/">eslint配置与使用</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/07/javascript编写规范/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/07/javascript编写规范/">javascript编写规范</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/07/文件与文件夹命名规范/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/07/文件与文件夹命名规范/">文件与文件夹命名规范</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/07/注释规范/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/12/07/注释规范/">注释规范</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/12/06/前端页面跳转规范/" class="archive-article-date">
-  	<time datetime="2017-12-06T13:11:13.542Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-06</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -371,8 +345,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

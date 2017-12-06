@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://996465114.github.io">
-  <title>test | outside blog</title>
+  <title>outside blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://996465114.github.io/2017/12/06/test/index.html">
+  <meta name="description" content="页面跳转说明，expendObj是预留的扩展对象以备后续业务扩展使用，暂时可以不传：1.会员跳转到跟进页，也可能跳转到查询分配页的1@click=&quot;common.openPage.followPage(会员ID, true, expendObj)&quot;  例如：客户管理页打开跟进页，第二个参数必须为true    1@click=&quot;common.openPage.followPage(scope.ro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="outside blog">
+<meta property="og:url" content="http://996465114.github.io/2017/12/06/前端页面跳转规范/index.html">
 <meta property="og:site_name" content="outside blog">
+<meta property="og:description" content="页面跳转说明，expendObj是预留的扩展对象以备后续业务扩展使用，暂时可以不传：1.会员跳转到跟进页，也可能跳转到查询分配页的1@click=&quot;common.openPage.followPage(会员ID, true, expendObj)&quot;  例如：客户管理页打开跟进页，第二个参数必须为true    1@click=&quot;common.openPage.followPage(scope.ro">
 <meta property="og:locale" content="chinese">
-<meta property="og:updated_time" content="2017-12-06T09:02:39.648Z">
+<meta property="og:updated_time" content="2017-08-25T09:06:23.576Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
+<meta name="twitter:title" content="outside blog">
+<meta name="twitter:description" content="页面跳转说明，expendObj是预留的扩展对象以备后续业务扩展使用，暂时可以不传：1.会员跳转到跟进页，也可能跳转到查询分配页的1@click=&quot;common.openPage.followPage(会员ID, true, expendObj)&quot;  例如：客户管理页打开跟进页，第二个参数必须为true    1@click=&quot;common.openPage.followPage(scope.ro">
   
     <link rel="alternative" href="/atom.xml" title="outside blog" type="application/atom+xml">
   
@@ -151,27 +154,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-test" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-前端页面跳转规范" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      test
-    </h1>
-  
-
-        
-        <a href="/2017/12/06/test/" class="archive-article-date">
-  	<time datetime="2017-12-06T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-06</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="页面跳转说明，expendObj是预留的扩展对象以备后续业务扩展使用，暂时可以不传："><a href="#页面跳转说明，expendObj是预留的扩展对象以备后续业务扩展使用，暂时可以不传：" class="headerlink" title="页面跳转说明，expendObj是预留的扩展对象以备后续业务扩展使用，暂时可以不传："></a>页面跳转说明，expendObj是预留的扩展对象以备后续业务扩展使用，暂时可以不传：</h2><h3 id="1-会员跳转到跟进页，也可能跳转到查询分配页的"><a href="#1-会员跳转到跟进页，也可能跳转到查询分配页的" class="headerlink" title="1.会员跳转到跟进页，也可能跳转到查询分配页的"></a>1.会员跳转到跟进页，也可能跳转到查询分配页的</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@click=<span class="string">"common.openPage.followPage(会员ID, true, expendObj)"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>例如：客户管理页打开跟进页，第二个参数必须为<code>true</code>  </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@click=<span class="string">"common.openPage.followPage(scope.row.memberId, true)"</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-明确页面会跳转到查询分配页的"><a href="#2-明确页面会跳转到查询分配页的" class="headerlink" title="2.明确页面会跳转到查询分配页的"></a>2.明确页面会跳转到查询分配页的</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@click=<span class="string">"common.openPage.followPage(scope.row.memberId, false, expendObj)"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>例如：客户管理页打开跟进页，第二个参数必须为<code>false</code>  </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@click=<span class="string">"common.openPage.followPage(scope.row.memberId, false)"</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-跳转到例如“客户管理”这类title全文字无区分的"><a href="#3-跳转到例如“客户管理”这类title全文字无区分的" class="headerlink" title="3.跳转到例如“客户管理”这类title全文字无区分的"></a>3.跳转到例如“客户管理”这类title全文字无区分的</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@click=<span class="string">"common.openPage.customPage(name, comp, Id, obj, expendObj)"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>例如：在个人中心点击某个按钮要打开客户管理页并查询出对应数据列表,第三个参数<code>必须传空</code>  </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@click=<span class="string">"common.openPage.customPage('客户管理', 'userManage', '', &#123;deptId: -1, caseClass: 400, age: 28&#125;)"</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-跳转到例如“打印收据6002876”这类以“文字-数字”来区分的页面"><a href="#4-跳转到例如“打印收据6002876”这类以“文字-数字”来区分的页面" class="headerlink" title="4.跳转到例如“打印收据6002876”这类以“文字+数字”来区分的页面"></a>4.跳转到例如“打印收据6002876”这类以“文字+数字”来区分的页面</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@click=<span class="string">"common.openPage.customPage(name, comp, id, obj, expendObj)"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>例如：在个人中心点击某个按钮要打开客户管理页并查询出对应数据列表,第三个参数<code>必须传</code>  </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@click=<span class="string">"common.openPage.customPage('打印收据', 'receiptPrint', 6002876, &#123;orderId: 500000, receiptId: 6002876&#125;)"</span></span><br></pre></td></tr></table></figure>
       
 
       
@@ -250,7 +257,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://996465114.github.io/2017/12/06/test/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://996465114.github.io/2017/12/06/前端页面跳转规范/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -264,11 +271,15 @@
   
 <nav id="article-nav">
   
-  
-    <a href="/2017/12/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
+    <a href="/2017/12/07/注释规范/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          注释规范
+        
+      </div>
     </a>
+  
   
 </nav>
 
