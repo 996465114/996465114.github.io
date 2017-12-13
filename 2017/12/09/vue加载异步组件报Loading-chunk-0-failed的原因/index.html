@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://996465114.github.io">
   <title>vue加载异步组件报Loading chunk ** failed的原因 | outside blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一次项目发版后，大部分用户反馈了一个异常 —&amp;gt; Error: Loading chunk ** failed，大概如图所示。 从报错的异常上，可以知道应该是某个chunk文件加载不到，但具体不知道是什么原因导致。我们自己开发的环境重现不了这个错误，实在让人头痛。 我们的vue项目对组件的处理是按需加载的，每个异步组件都会生成不同的chunk分片。项目boss起初怀疑是前端webpack构建有">
+  <meta name="description" content="使用vue+webpack开发的一个系统，上线后，频繁收到用户体验系统出现异常的反馈，其中最多的就是类似以下图片中的报错，Error: Loading chunk ** failed，导致组件直接打不开。但是刷新页面之后，又可以正常访问组件。 从报错的异常上，可以知道应该是某个chunk文件加载不到，但具体不知道是什么原因导致。我们自己开发的环境重现不了这个错误，实在让人头痛。 我们的vue项目对">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue加载异步组件报Loading chunk ** failed的原因">
 <meta property="og:url" content="http://996465114.github.io/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/index.html">
 <meta property="og:site_name" content="outside blog">
-<meta property="og:description" content="一次项目发版后，大部分用户反馈了一个异常 —&amp;gt; Error: Loading chunk ** failed，大概如图所示。 从报错的异常上，可以知道应该是某个chunk文件加载不到，但具体不知道是什么原因导致。我们自己开发的环境重现不了这个错误，实在让人头痛。 我们的vue项目对组件的处理是按需加载的，每个异步组件都会生成不同的chunk分片。项目boss起初怀疑是前端webpack构建有">
+<meta property="og:description" content="使用vue+webpack开发的一个系统，上线后，频繁收到用户体验系统出现异常的反馈，其中最多的就是类似以下图片中的报错，Error: Loading chunk ** failed，导致组件直接打不开。但是刷新页面之后，又可以正常访问组件。 从报错的异常上，可以知道应该是某个chunk文件加载不到，但具体不知道是什么原因导致。我们自己开发的环境重现不了这个错误，实在让人头痛。 我们的vue项目对">
 <meta property="og:locale" content="chinese">
 <meta property="og:image" content="http://996465114.github.io/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/1.png">
 <meta property="og:image" content="http://996465114.github.io/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/2.png">
@@ -21,10 +21,10 @@
 <meta property="og:image" content="http://996465114.github.io/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/4.png">
 <meta property="og:image" content="http://996465114.github.io/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/5.png">
 <meta property="og:image" content="http://996465114.github.io/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/6.png">
-<meta property="og:updated_time" content="2017-12-09T08:04:52.508Z">
+<meta property="og:updated_time" content="2017-12-11T07:05:44.571Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue加载异步组件报Loading chunk ** failed的原因">
-<meta name="twitter:description" content="一次项目发版后，大部分用户反馈了一个异常 —&amp;gt; Error: Loading chunk ** failed，大概如图所示。 从报错的异常上，可以知道应该是某个chunk文件加载不到，但具体不知道是什么原因导致。我们自己开发的环境重现不了这个错误，实在让人头痛。 我们的vue项目对组件的处理是按需加载的，每个异步组件都会生成不同的chunk分片。项目boss起初怀疑是前端webpack构建有">
+<meta name="twitter:description" content="使用vue+webpack开发的一个系统，上线后，频繁收到用户体验系统出现异常的反馈，其中最多的就是类似以下图片中的报错，Error: Loading chunk ** failed，导致组件直接打不开。但是刷新页面之后，又可以正常访问组件。 从报错的异常上，可以知道应该是某个chunk文件加载不到，但具体不知道是什么原因导致。我们自己开发的环境重现不了这个错误，实在让人头痛。 我们的vue项目对">
 <meta name="twitter:image" content="http://996465114.github.io/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/1.png">
   
   
@@ -145,7 +145,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一次项目发版后，大部分用户反馈了一个异常 —&gt; <code>Error: Loading chunk ** failed</code>，大概如图所示。<br><img src="/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/1.png" alt=""></p>
+        <p>使用vue+webpack开发的一个系统，上线后，频繁收到用户体验系统出现异常的反馈，其中最多的就是类似以下图片中的报错，<code>Error: Loading chunk ** failed</code>，导致组件直接打不开。但是刷新页面之后，又可以正常访问组件。<br><img src="/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/1.png" alt=""></p>
 <p>从报错的异常上，可以知道应该是某个chunk文件加载不到，但具体不知道是什么原因导致。我们自己开发的环境重现不了这个错误，实在让人头痛。</p>
 <p>我们的vue项目对组件的处理是按需加载的，每个异步组件都会生成不同的chunk分片。项目boss起初怀疑是前端webpack构建有问题，丢失了这个文件。于是我找来了后端的同学，通过查询服务器存放的chunk文件，发现28.js这个chunk是存在的。<br><img src="/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/2.png" alt=""><br>文件存在因此可以排除是前端构建异常导致的错误。</p>
 <a id="more"></a>
@@ -168,7 +168,7 @@
 <p><br></p>
 <h4 id="大家陷入了沉思，既然服务器文件存在，又不存在文件缓存问题，那报错产生的原因是什么？"><a href="#大家陷入了沉思，既然服务器文件存在，又不存在文件缓存问题，那报错产生的原因是什么？" class="headerlink" title="大家陷入了沉思，既然服务器文件存在，又不存在文件缓存问题，那报错产生的原因是什么？"></a>大家陷入了沉思，既然服务器文件存在，又不存在文件缓存问题，那报错产生的原因是什么？</h4><p>突然我们想到一种场景，比如说用户一整天没有关闭我们的系统，然后当晚我们发版，第二天用户继续访问系统，那么index.html文件是不会拿到最新的，那么manifest.js里面28的分片还是31bfc4923d99e6074321，发版后服务器当然不会存在该分片，导致访问文件报错。<br>经过我的努力，也把该异常重现出来。</p>
 <p><br></p>
-<h4 id="最后，这里提供几个不成熟的解决方案"><a href="#最后，这里提供几个不成熟的解决方案" class="headerlink" title="最后，这里提供几个不成熟的解决方案"></a>最后，这里提供几个不成熟的解决方案</h4><p>1、每次构建，服务器两份文件<br>2、把hash值拼凑在文件后面，例如28.js?_v=a26a82cfffa4740d23b0,这样每次都能找到28.js文件，当然这只是权宜之计，避免报错而已<br>3、设置session过期时间，发版之后，重新跳转到登录页面。<br>4、…</p>
+<h4 id="最后，这里提供几个不成熟的解决方案"><a href="#最后，这里提供几个不成熟的解决方案" class="headerlink" title="最后，这里提供几个不成熟的解决方案"></a>最后，这里提供几个不成熟的解决方案</h4><p>1、每次构建，服务器两份文件<br>2、把hash值拼凑在文件后面，例如28.js?_v=a26a82cfffa4740d23b0,这样每次都能找到28.js文件，当然这只是权宜之计，避免报错而已<br>3、设置session过期时间，发版之后，重新跳转到登录页面。</p>
 
       
 
@@ -189,6 +189,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          element-ui组件el-tabs导致的tab渲染错乱-原因探索
+        
+      </div>
+    </a>
   
   
     <a href="/2017/12/07/css编写规范/" id="article-nav-older" class="article-nav-link-wrap">

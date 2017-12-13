@@ -116,6 +116,68 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-element-ui组件el-tabs导致的tab渲染错乱-原因探索" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/">element-ui组件el-tabs导致的tab渲染错乱-原因探索</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/" class="archive-article-date">
+  	<time datetime="2017-12-13T06:52:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>不知道有没有人跟我有同样的遭遇，使用element-ui插件中的el-tabs组件，进行删除动作时，导致id错乱。</p>
+<p>我们系统因业务的特殊性，需要做成这个多标签的形式。刚好element-ui中el-tabs可以满足这种需求。实现这种多tabs的代码如下.<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/3.png" alt=""><br>每选中菜单就会多增加一个tab，tab之间有可能使用相同的组件.<br></p>
+        
+          <a class="article-more-a" href="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-vue加载异步组件报Loading-chunk-0-failed的原因" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -136,7 +198,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一次项目发版后，大部分用户反馈了一个异常 —&gt; <code>Error: Loading chunk ** failed</code>，大概如图所示。<br><img src="/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/1.png" alt=""></p>
+        <p>使用vue+webpack开发的一个系统，上线后，频繁收到用户体验系统出现异常的反馈，其中最多的就是类似以下图片中的报错，<code>Error: Loading chunk ** failed</code>，导致组件直接打不开。但是刷新页面之后，又可以正常访问组件。<br><img src="/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/1.png" alt=""></p>
 <p>从报错的异常上，可以知道应该是某个chunk文件加载不到，但具体不知道是什么原因导致。我们自己开发的环境重现不了这个错误，实在让人头痛。</p>
 <p>我们的vue项目对组件的处理是按需加载的，每个异步组件都会生成不同的chunk分片。项目boss起初怀疑是前端webpack构建有问题，丢失了这个文件。于是我找来了后端的同学，通过查询服务器存放的chunk文件，发现28.js这个chunk是存在的。<br><img src="/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/2.png" alt=""><br>文件存在因此可以排除是前端构建异常导致的错误。</p>
         
@@ -278,15 +340,10 @@
 <li>sublimelinter-contrib-eslint</li>
 </ul>
 <h3 id="项目中生成-eslintrc-js配置文件"><a href="#项目中生成-eslintrc-js配置文件" class="headerlink" title="项目中生成.eslintrc.js配置文件"></a>项目中生成.eslintrc.js配置文件</h3><blockquote>
-<p>eslint –init</p>
-</blockquote>
-<h3 id="eslint配置项说明"><a href="#eslint配置项说明" class="headerlink" title="eslint配置项说明"></a>eslint配置项说明</h3><blockquote>
-<p>详细请参考 <a href="http://eslint.cn/docs/rules/" target="_blank" rel="noopener">http://eslint.cn/docs/rules/</a></p>
-</blockquote>
-<ul>
-<li>eqeqeq: [‘warn’, “always”] 要求使用=== 否则警示</li>
-</ul>
-
+<p>eslint –init<br></p></blockquote>
+        
+          <a class="article-more-a" href="/2017/12/07/eslint配置与使用/#more">more >></a>
+        
       
 
       

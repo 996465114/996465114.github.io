@@ -6,19 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://996465114.github.io">
-  <title>eslint配置与使用 | outside blog</title>
+  <title>element-ui组件el-tabs导致的tab渲染错乱-原因探索 | outside blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="sublime eslint 环境配置全局安装eslint插件  npm install eslint -g  集成sublimesublime text 需要安装两个插件  sublimelinter sublimelinter-contrib-eslint  项目中生成.eslintrc.js配置文件 eslint –init">
+  <meta name="description" content="不知道有没有人跟我有同样的遭遇，使用element-ui插件中的el-tabs组件，进行删除动作时，导致id错乱。 我们系统因业务的特殊性，需要做成这个多标签的形式。刚好element-ui中el-tabs可以满足这种需求。实现这种多tabs的代码如下.每选中菜单就会多增加一个tab，tab之间有可能使用相同的组件.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="eslint配置与使用">
-<meta property="og:url" content="http://996465114.github.io/2017/12/07/eslint配置与使用/index.html">
+<meta property="og:title" content="element-ui组件el-tabs导致的tab渲染错乱-原因探索">
+<meta property="og:url" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/index.html">
 <meta property="og:site_name" content="outside blog">
-<meta property="og:description" content="sublime eslint 环境配置全局安装eslint插件  npm install eslint -g  集成sublimesublime text 需要安装两个插件  sublimelinter sublimelinter-contrib-eslint  项目中生成.eslintrc.js配置文件 eslint –init">
+<meta property="og:description" content="不知道有没有人跟我有同样的遭遇，使用element-ui插件中的el-tabs组件，进行删除动作时，导致id错乱。 我们系统因业务的特殊性，需要做成这个多标签的形式。刚好element-ui中el-tabs可以满足这种需求。实现这种多tabs的代码如下.每选中菜单就会多增加一个tab，tab之间有可能使用相同的组件.">
 <meta property="og:locale" content="chinese">
-<meta property="og:updated_time" content="2017-12-11T07:08:32.044Z">
+<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/3.png">
+<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/1.png">
+<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/2.png">
+<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/4.png">
+<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/5.png">
+<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/6.png">
+<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/10.png">
+<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/7.png">
+<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/8.png">
+<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/9.png">
+<meta property="og:updated_time" content="2017-12-13T08:47:45.495Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="eslint配置与使用">
-<meta name="twitter:description" content="sublime eslint 环境配置全局安装eslint插件  npm install eslint -g  集成sublimesublime text 需要安装两个插件  sublimelinter sublimelinter-contrib-eslint  项目中生成.eslintrc.js配置文件 eslint –init">
+<meta name="twitter:title" content="element-ui组件el-tabs导致的tab渲染错乱-原因探索">
+<meta name="twitter:description" content="不知道有没有人跟我有同样的遭遇，使用element-ui插件中的el-tabs组件，进行删除动作时，导致id错乱。 我们系统因业务的特殊性，需要做成这个多标签的形式。刚好element-ui中el-tabs可以满足这种需求。实现这种多tabs的代码如下.每选中菜单就会多增加一个tab，tab之间有可能使用相同的组件.">
+<meta name="twitter:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/3.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -118,74 +129,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-eslint配置与使用" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-element-ui组件el-tabs导致的tab渲染错乱-原因探索" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      eslint配置与使用
+      element-ui组件el-tabs导致的tab渲染错乱-原因探索
     </h1>
   
 
         
-        <a href="/2017/12/07/eslint配置与使用/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
+        <a href="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/" class="archive-article-date">
+  	<time datetime="2017-12-13T06:52:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="sublime-eslint-环境配置"><a href="#sublime-eslint-环境配置" class="headerlink" title="sublime eslint 环境配置"></a>sublime eslint 环境配置</h2><p>全局安装eslint插件</p>
-<blockquote>
-<p>npm install eslint -g</p>
-</blockquote>
-<h3 id="集成sublime"><a href="#集成sublime" class="headerlink" title="集成sublime"></a>集成sublime</h3><p>sublime text 需要安装两个插件</p>
-<ul>
-<li>sublimelinter</li>
-<li>sublimelinter-contrib-eslint</li>
-</ul>
-<h3 id="项目中生成-eslintrc-js配置文件"><a href="#项目中生成-eslintrc-js配置文件" class="headerlink" title="项目中生成.eslintrc.js配置文件"></a>项目中生成.eslintrc.js配置文件</h3><blockquote>
-<p>eslint –init<br><a id="more"></a></p>
-</blockquote>
-<h3 id="eslint配置项说明"><a href="#eslint配置项说明" class="headerlink" title="eslint配置项说明"></a>eslint配置项说明</h3><blockquote>
-<p>详细请参考 <a href="http://eslint.cn/docs/rules/" target="_blank" rel="noopener">http://eslint.cn/docs/rules/</a></p>
-</blockquote>
-<h3 id="项目中用到的配置"><a href="#项目中用到的配置" class="headerlink" title="项目中用到的配置"></a>项目中用到的配置</h3><ul>
-<li>‘array-bracket-spacing’: [“error”, “never”], // 禁止在数组括号内出现空格 [‘a’: 12]</li>
-<li>‘arrow-spacing’: [“error”, {“before”: true, “after”: true}], // 箭头函数使用一致空格 a =&gt; b</li>
-<li>‘block-spacing’: [“error”, “never”], // 禁止在单行代码块中使用空格 function foo() {return true;}</li>
-<li>‘camelcase’: [“error”, {“properties”: “always”}], // 使用驼峰式命名，常量使用下划线</li>
-<li>‘comma-dangle’: [“error”, “never”], // 禁用拖尾逗号 [‘a’: 1, ‘b’: 3],3后面不能有逗号</li>
-<li>‘comma-spacing’: [“error”, { “before”: false, “after”: true }], // 强制在逗号周围使用空格 a = 1, b = 3; 前面不要有空格，后面有空格</li>
-<li>‘computed-property-spacing’: [“error”, “never”], // 禁止在计算属性中使用空格 a[‘key’]</li>
-<li>‘curly’: “error”, // 要求遵循大括号约定 if () {} 必须要有{}</li>
-<li>‘eqeqeq’: “error”, // 要求使用 === 和 !==</li>
-<li>‘indent’: “error”,</li>
-<li>‘key-spacing’: [“error”, {“beforeColon”: false, “afterColon”: true}],// 键值与冒号之间的空格一致性</li>
-<li>‘keyword-spacing’: [“error”, {“before”: true, “after”: true}], // 强制关键字周围空格的一致性 } else { ‘else’是关键字</li>
-<li>‘lines-around-comment’: [“error”, {“beforeBlockComment”: true, “allowBlockStart”: true, “allowObjectStart”: true, “allowArrayStart”: true}], // 强制注释周围有空行</li>
-<li>‘newline-after-var’: [“error”, “always”], // 要求变量声明语句后有一行空行</li>
-<li>‘no-console’: “off”, // 允许使用console</li>
-<li>‘no-empty’: “warn”, // 禁止空块语句</li>
-<li>‘no-extra-semi’: “warn”, // 警告不必要的分号</li>
-<li>‘no-extra-boolean-cast’: ‘warn’, // 警告不必要的布尔类型转换</li>
-<li>‘no-redeclare’: “warn”, // 警告重新声明变量</li>
-<li>‘no-spaced-func’: “error”, // 函数调用时函数名与()之间不能有空格</li>
-<li>‘no-undef’: “warn”, // 警告没定义</li>
-<li>‘no-unused-vars’: “off”, // 关闭未使用过的变量</li>
-<li>‘no-debugger’: process.env.NODE_ENV === ‘production’ ? 2 : 0,</li>
-<li>‘object-curly-spacing’: [“error”, “never”], // 强制在花括号中使用一致的空格 {‘a’: 1, ‘b’: 2}</li>
-<li>‘semi’: [“error”, “always”], // 要求句末添加分号</li>
-<li>‘semi-spacing’: [“error”, {“before”: false, “after”: true}], // 强制分号周围的空格</li>
-<li>‘space-before-blocks’: [“error”, “always”], // 要求语句块之前的空格</li>
-<li>‘space-before-function-paren’: [“error”, “always”], // 要求函数圆括号之前有一个空格</li>
-<li>‘space-in-parens’: [“error”, “never”], // 强制圆括号内没有空格</li>
-<li>‘space-infix-ops’: [“error”, {“int32Hint”: false}], // 要求中缀操作符周围有空格</li>
-<li>‘space-unary-ops’: “error” // 要求在一元操作符之前或之后存在空格</li>
-</ul>
+        <p>不知道有没有人跟我有同样的遭遇，使用element-ui插件中的el-tabs组件，进行删除动作时，导致id错乱。</p>
+<p>我们系统因业务的特殊性，需要做成这个多标签的形式。刚好element-ui中el-tabs可以满足这种需求。实现这种多tabs的代码如下.<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/3.png" alt=""><br>每选中菜单就会多增加一个tab，tab之间有可能使用相同的组件.<br><a id="more"></a></p>
+<p>例如：<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/1.png" alt=""><br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/2.png" alt=""><br>以上两个图片，都是使用相同的FollowUp组件.</p>
+<p>问题就发生在，当我删除id为107560489的tab时，发生了id错乱的异常.<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/4.png" alt=""></p>
+<p>红框的id竟然没有对应，本来要删除id为107560489的tab,却删除成id为7146246的tab，也即我所形容的id错乱.</p>
+<p>经过多组测试，我发现每次对使用相同组件的tab进行删除动作，都会删除掉最后一个tab对应的dom节点.</p>
+<p>这个异常困扰了我很久，网上也找了很多资料，做了各种假设。最后问题的解决方法也很简单，就是在el-tab-pane节点里加上属性<code>:key=&quot;item.title&quot;</code>,给每个tab加上唯一标识，就解决了这个问题。如图红框<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/5.png" alt=""></p>
+<p><br><br>问题虽然解决了，但我还是不甘心，不止步于单纯的解决问题.<br>好奇心驱动我去看vue的源码，找出导致错乱的原因.</p>
+<p><br></p>
+<h3 id="el-tab-pane没有添加-key。"><a href="#el-tab-pane没有添加-key。" class="headerlink" title="el-tab-pane没有添加:key。"></a>el-tab-pane没有添加:key。</h3><p>当点击tab关闭按钮后，vue需要将相应视图从dom节点移除，首先vue会对虚拟节点进行比较。<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/6.png" alt=""><br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/10.png" alt=""><br>oldCh代表未删除前的节点，有三个tab，分别代表<code>客户管理</code>,<code>客户跟进107560489</code>,<code>客户跟进7146246</code>。<br>newCh也即删除后重新构建的虚拟节点，有两个tab，分别代表<code>客户管理</code>,<code>客户跟进7146246</code>。</p>
+<p><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/7.png" alt=""><br>可以看到，此时每个vnode节点中的key值为undefined</p>
+<p><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/8.png" alt=""><br>然后对vnode节点进行比较，图片中<code>1</code>是使用oldCh跟newCh两个数组的开始节点进行比较，当比较的过程中发现有不同的vnode，那么将换用图中<code>2</code>的方式进行比较，<code>2</code>是将比较换成从数组的结尾向数组前比较。</p>
+<p>这也很好理解,假设能正确的删除<code>107560489</code>对应的dom节点,那步骤将会如下：<br>oldCh[0] <code>客户管理</code> === newCh[0] <code>客户管理</code><br>oldCh[1] <code>107560489</code> !== newCh[1] <code>7146246</code><br>oldCh[2] <code>7146246</code> === newCh[1] <code>7146246</code></p>
+<p>但是执行的过程是这样的<br>oldCh[0] <code>客户管理</code> === newCh[0] <code>客户管理</code><br>oldCh[1] <code>107560489</code> === newCh[1] <code>7146246</code><br>果然，问题就发生在这里，oldCh[1]与newCh[1]相等，那oldCh[2]将会被dom节点遗弃，错误的将<code>7146246</code>对应dom节点删除。</p>
+<p>我发现vue中函数sameVnode是这样实现<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sameVnode</span>(<span class="params">vnode1, vnode2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        vnode1.key === vnode2.key &amp;&amp;</span><br><span class="line">        vnode1.tag === vnode2.tag &amp;&amp;</span><br><span class="line">        vnode1.isComment === vnode2.isComment &amp;&amp;</span><br><span class="line">        !vnode1.data === !vnode2.data</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>很明显，当key没有设置，相同使用FollowUp组件，tag、isComment、data也是相同的，所以导致oldCh[1] <code>107560489</code> === newCh[1] <code>7146246</code>成立，sameVnode返回true，最后酿成删除错误节点的情况。当然，我也做了一次添加key的比较</p>
+<p><br></p>
+<h3 id="el-tab-pane添加-key。"><a href="#el-tab-pane添加-key。" class="headerlink" title="el-tab-pane添加:key。"></a>el-tab-pane添加:key。</h3><p>打印oldCh和newCh的虚拟节点<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/9.png" alt=""><br><code>key: &quot;跟进客户109160187&quot;</code><br>添加了key后，再调用sameVnode<br>oldCh[1] <code>107560489</code>跟newCh[1] <code>7146246</code>就不会相等了。</p>
 
       
 
@@ -207,18 +188,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/12/07/css编写规范/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          css编写规范
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/12/07/git 工作流/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git 工作流</div>
+    <a href="/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue加载异步组件报Loading chunk ** failed的原因</div>
       <i class="icon-circle-right"></i>
     </a>
   
