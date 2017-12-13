@@ -136,8 +136,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>不知道有没有人跟我有同样的遭遇，使用element-ui插件中的el-tabs组件，进行删除动作时，导致id错乱。</p>
-<p>我们系统因业务的特殊性，需要做成这个多标签的形式。刚好element-ui中el-tabs可以满足这种需求。实现这种多tabs的代码如下.<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/3.png" alt=""><br>每选中菜单就会多增加一个tab，tab之间有可能使用相同的组件.<br></p>
+        <p>不知道有没有人跟我有同样的遭遇，使用element-ui插件中的el-tabs组件实现多tab窗口，每个tab页签代表一个单独的id，对tab页签进行删除动作时，导致id错乱。</p>
+<p>我们系统因业务的特殊性，需要做成多tab页签的形式。刚好element-ui中el-tabs可以满足这种需求。实现这种多tabs的代码如下.<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/3.png" alt=""><br>每选中菜单就会多增加一个tab，tab也可以进行删除操作，点击切换操作。同时，每个tab页签的内容部分有使用相同组件的情况.<br></p>
         
           <a class="article-more-a" href="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/#more">more >></a>
         
@@ -310,77 +310,6 @@
 
 
   
-    <article id="post-eslint配置与使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/07/eslint配置与使用/">eslint配置与使用</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/07/eslint配置与使用/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="sublime-eslint-环境配置"><a href="#sublime-eslint-环境配置" class="headerlink" title="sublime eslint 环境配置"></a>sublime eslint 环境配置</h2><p>全局安装eslint插件</p>
-<blockquote>
-<p>npm install eslint -g</p>
-</blockquote>
-<h3 id="集成sublime"><a href="#集成sublime" class="headerlink" title="集成sublime"></a>集成sublime</h3><p>sublime text 需要安装两个插件</p>
-<ul>
-<li>sublimelinter</li>
-<li>sublimelinter-contrib-eslint</li>
-</ul>
-<h3 id="项目中生成-eslintrc-js配置文件"><a href="#项目中生成-eslintrc-js配置文件" class="headerlink" title="项目中生成.eslintrc.js配置文件"></a>项目中生成.eslintrc.js配置文件</h3><blockquote>
-<p>eslint –init<br></p></blockquote>
-        
-          <a class="article-more-a" href="/2017/12/07/eslint配置与使用/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-git 工作流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -422,6 +351,77 @@
 <li>禁止release分支提交代码，完成release分支，将代码合并到develop分支和master分支，打上Tag</li>
 </ol>
 
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-eslint配置与使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/07/eslint配置与使用/">eslint配置与使用</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/07/eslint配置与使用/" class="archive-article-date">
+  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="sublime-eslint-环境配置"><a href="#sublime-eslint-环境配置" class="headerlink" title="sublime eslint 环境配置"></a>sublime eslint 环境配置</h2><p>全局安装eslint插件</p>
+<blockquote>
+<p>npm install eslint -g</p>
+</blockquote>
+<h3 id="集成sublime"><a href="#集成sublime" class="headerlink" title="集成sublime"></a>集成sublime</h3><p>sublime text 需要安装两个插件</p>
+<ul>
+<li>sublimelinter</li>
+<li>sublimelinter-contrib-eslint</li>
+</ul>
+<h3 id="项目中生成-eslintrc-js配置文件"><a href="#项目中生成-eslintrc-js配置文件" class="headerlink" title="项目中生成.eslintrc.js配置文件"></a>项目中生成.eslintrc.js配置文件</h3><blockquote>
+<p>eslint –init<br></p></blockquote>
+        
+          <a class="article-more-a" href="/2017/12/07/eslint配置与使用/#more">more >></a>
+        
       
 
       
