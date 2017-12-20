@@ -306,75 +306,6 @@
 
 
   
-    <article id="post-css编写规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/07/css编写规范/">css编写规范</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/07/css编写规范/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-css选择器命名"><a href="#1-css选择器命名" class="headerlink" title="1. css选择器命名"></a>1. css选择器命名</h2><ul>
-<li>全英文小写（不要用中文拼音命名）</li>
-<li>使用中划线分割多单词的选择器名（.ui-element）</li>
-<li>禁止使用下划线</li>
-</ul>
-<h2 id="2-使用tab（4个空格）"><a href="#2-使用tab（4个空格）" class="headerlink" title="2. 使用tab（4个空格）"></a>2. 使用tab（4个空格）</h2><h2 id="3-空格"><a href="#3-空格" class="headerlink" title="3. 空格"></a>3. 空格</h2><ul>
-<li>‘{‘前留一个空格</li>
-<li>‘:’后留一个空格</li>
-<li>句末不要留多余空格</li></ul>
-        
-          <a class="article-more-a" href="/2017/12/07/css编写规范/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-eslint配置与使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -446,19 +377,19 @@
 
 
   
-    <article id="post-git 工作流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-css编写规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/07/git 工作流/">git 工作流</a>
+      <a class="article-title" href="/2017/12/07/css编写规范/">css编写规范</a>
     </h1>
   
 
         
-        <a href="/2017/12/07/git 工作流/" class="archive-article-date">
+        <a href="/2017/12/07/css编写规范/" class="archive-article-date">
   	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
 </a>
         
@@ -466,92 +397,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="GIT-工作流"><a href="#GIT-工作流" class="headerlink" title="GIT 工作流"></a>GIT 工作流</h1><h2 id="分支介绍"><a href="#分支介绍" class="headerlink" title="分支介绍"></a>分支介绍</h2><ul>
-<li>master: 存放已部署在生产环境的稳定代码，以tag标记版本节点。</li>
-<li>release: 发布分支，基于develop分支，用于体侧后修复bug，通常新功能不在此分支上开发。完成后合并到develp分支和master分支。</li>
-<li>develop: 不直接在该分支上进行开发，用来合并feature分支的代码</li>
+        <h2 id="1-css选择器命名"><a href="#1-css选择器命名" class="headerlink" title="1. css选择器命名"></a>1. css选择器命名</h2><ul>
+<li>全英文小写（不要用中文拼音命名）</li>
+<li>使用中划线分割多单词的选择器名（.ui-element）</li>
+<li>禁止使用下划线</li>
 </ul>
-<h2 id="git完整工作流"><a href="#git完整工作流" class="headerlink" title="git完整工作流"></a>git完整工作流</h2><h3 id="正常流"><a href="#正常流" class="headerlink" title="正常流"></a>正常流</h3><ol>
-<li>接到版本需求</li>
-<li>新建featrue分支（以版本号命名分支），进入开发</li>
-<li>develop完成一个小功能，需合并到本地develop分支，再push到远程分支</li>
-<li>开发完成，准备体侧</li>
-<li>禁止feature分支提交代码，完成feature分支，合并代码到develop</li>
-<li>建立release分支（以版本号命名分支），在此分支上修复测试bug</li>
-<li>测试完成，发布版本</li>
-</ol>
-<h3 id="异常流"><a href="#异常流" class="headerlink" title="异常流"></a>异常流</h3><ol>
-<li>发现线上紧急bug</li>
-<li>从master检出release分支，在此分支上修复bug并提交测试</li>
-<li>测试完成，准备发布修复版本</li>
-<li>禁止release分支提交代码，完成release分支，将代码合并到develop分支和master分支，打上Tag</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
+<h2 id="2-使用tab（4个空格）"><a href="#2-使用tab（4个空格）" class="headerlink" title="2. 使用tab（4个空格）"></a>2. 使用tab（4个空格）</h2><h2 id="3-空格"><a href="#3-空格" class="headerlink" title="3. 空格"></a>3. 空格</h2><ul>
+<li>‘{‘前留一个空格</li>
+<li>‘:’后留一个空格</li>
+<li>句末不要留多余空格</li></ul>
         
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-注释规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/07/注释规范/">注释规范</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/07/注释规范/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="javascript-注释规范"><a href="#javascript-注释规范" class="headerlink" title="javascript 注释规范"></a>javascript 注释规范</h2><h3 id="变量注释"><a href="#变量注释" class="headerlink" title="变量注释"></a>变量注释</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> addTab = <span class="number">1</span>, <span class="comment">// 增加一个tab</span></span><br><span class="line">    removeTab = <span class="number">3</span>; <span class="comment">// 移除一个tab</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>说明：变量的注释是在变量的右侧添加注释，<code>注意//左右的空格</code></p>
-</blockquote>
-<h3 id="选择语句注释"><a href="#选择语句注释" class="headerlink" title="选择语句注释"></a>选择语句注释</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当a !== 2时，是一种情况，否则...</span></span><br><span class="line"><span class="keyword">if</span> (a !== <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="comment">// TODO</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// TODO</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="函数注释"><a href="#函数注释" class="headerlink" title="函数注释"></a>函数注释</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * [addTab description] 函数的作用</span></span><br><span class="line"><span class="comment"> * @param &#123;[type]&#125; index [description] 这个参数的值类型跟作用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addTab</span> (<span class="params">index</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// TODO</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/12/07/注释规范/#more">more >></a>
+          <a class="article-more-a" href="/2017/12/07/css编写规范/#more">more >></a>
         
       
 
@@ -684,6 +540,150 @@
 <li>文件名使用全小写</li>
 <li>多单词分隔统一使用中划线命名</li>
 </ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-注释规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/07/注释规范/">注释规范</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/07/注释规范/" class="archive-article-date">
+  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="javascript-注释规范"><a href="#javascript-注释规范" class="headerlink" title="javascript 注释规范"></a>javascript 注释规范</h2><h3 id="变量注释"><a href="#变量注释" class="headerlink" title="变量注释"></a>变量注释</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> addTab = <span class="number">1</span>, <span class="comment">// 增加一个tab</span></span><br><span class="line">    removeTab = <span class="number">3</span>; <span class="comment">// 移除一个tab</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>说明：变量的注释是在变量的右侧添加注释，<code>注意//左右的空格</code></p>
+</blockquote>
+<h3 id="选择语句注释"><a href="#选择语句注释" class="headerlink" title="选择语句注释"></a>选择语句注释</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当a !== 2时，是一种情况，否则...</span></span><br><span class="line"><span class="keyword">if</span> (a !== <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="comment">// TODO</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// TODO</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="函数注释"><a href="#函数注释" class="headerlink" title="函数注释"></a>函数注释</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * [addTab description] 函数的作用</span></span><br><span class="line"><span class="comment"> * @param &#123;[type]&#125; index [description] 这个参数的值类型跟作用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addTab</span> (<span class="params">index</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// TODO</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/12/07/注释规范/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-git 工作流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/07/git 工作流/">git 工作流</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/07/git 工作流/" class="archive-article-date">
+  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="GIT-工作流"><a href="#GIT-工作流" class="headerlink" title="GIT 工作流"></a>GIT 工作流</h1><h2 id="分支介绍"><a href="#分支介绍" class="headerlink" title="分支介绍"></a>分支介绍</h2><ul>
+<li>master: 存放已部署在生产环境的稳定代码，以tag标记版本节点。</li>
+<li>release: 发布分支，基于develop分支，用于体侧后修复bug，通常新功能不在此分支上开发。完成后合并到develp分支和master分支。</li>
+<li>develop: 不直接在该分支上进行开发，用来合并feature分支的代码</li>
+</ul>
+<h2 id="git完整工作流"><a href="#git完整工作流" class="headerlink" title="git完整工作流"></a>git完整工作流</h2><h3 id="正常流"><a href="#正常流" class="headerlink" title="正常流"></a>正常流</h3><ol>
+<li>接到版本需求</li>
+<li>新建featrue分支（以版本号命名分支），进入开发</li>
+<li>develop完成一个小功能，需合并到本地develop分支，再push到远程分支</li>
+<li>开发完成，准备体侧</li>
+<li>禁止feature分支提交代码，完成feature分支，合并代码到develop</li>
+<li>建立release分支（以版本号命名分支），在此分支上修复测试bug</li>
+<li>测试完成，发布版本</li>
+</ol>
+<h3 id="异常流"><a href="#异常流" class="headerlink" title="异常流"></a>异常流</h3><ol>
+<li>发现线上紧急bug</li>
+<li>从master检出release分支，在此分支上修复bug并提交测试</li>
+<li>测试完成，准备发布修复版本</li>
+<li>禁止release分支提交代码，完成release分支，将代码合并到develop分支和master分支，打上Tag</li>
+</ol>
 
       
 
