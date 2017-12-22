@@ -243,6 +243,73 @@
 
 
   
+    <article id="post-前端异常监控" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/10/前端异常监控/">前端异常监控</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/10/前端异常监控/" class="archive-article-date">
+  	<time datetime="2017-12-10T04:38:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如果一个系统不做异常监控，那么上线后完全不能感知到系统的异常。一个好的系统不应该让用户来反馈异常才找到自己的缺陷，异常上报对一个能自我容错的系统起到至关重要的作用</p>
+<p>要做异常上报之前，先要对系统中经常出现的异常做一次归纳。我将错误类型分成两种，一种是编译错误，另一种是执行错误。顾名思义，<strong>编译错误</strong>是检查js语法时候报错，<strong>执行错误</strong>是执行js代码时候报错。</p>
+<p><br></p>
+<h3 id="编译报错"><a href="#编译报错" class="headerlink" title="编译报错"></a>编译报错</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span> (<span class="params">a, b</span>) </span>&#123;&#125;;</span><br><span class="line">test(<span class="number">10</span> <span class="number">20</span>);</span><br><span class="line"><span class="comment">// Uncaught SyntaxError: missing ) after argument list</span></span><br></pre></td></tr></table></figure>
+<p>编译报错的类型有:<br>语法错误<code>SyntaxError</code><br>当引擎检查js语法，发现异常，会抛出错误，’同个块’的js都不会执行。SyntaxError不能被try-catch捕捉。</p>
+<blockquote>
+<p>同个块指的是在相同script标签内、同一个js外链里的代码<br></p></blockquote>
+        
+          <a class="article-more-a" href="/2017/12/10/前端异常监控/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-vue加载异步组件报Loading-chunk-0-failed的原因" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -268,6 +335,75 @@
 <p>我们的vue项目对组件的处理是按需加载的，每个异步组件都会生成不同的chunk分片。项目boss起初怀疑是前端webpack构建有问题，丢失了这个文件。于是我找来了后端的同学，通过查询服务器存放的chunk文件，发现28.js这个chunk是存在的。<br><img src="/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/2.png" alt=""><br>文件存在因此可以排除是前端构建异常导致的错误。</p>
         
           <a class="article-more-a" href="/2017/12/09/vue加载异步组件报Loading-chunk-0-failed的原因/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-css编写规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/07/css编写规范/">css编写规范</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/07/css编写规范/" class="archive-article-date">
+  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-css选择器命名"><a href="#1-css选择器命名" class="headerlink" title="1. css选择器命名"></a>1. css选择器命名</h2><ul>
+<li>全英文小写（不要用中文拼音命名）</li>
+<li>使用中划线分割多单词的选择器名（.ui-element）</li>
+<li>禁止使用下划线</li>
+</ul>
+<h2 id="2-使用tab（4个空格）"><a href="#2-使用tab（4个空格）" class="headerlink" title="2. 使用tab（4个空格）"></a>2. 使用tab（4个空格）</h2><h2 id="3-空格"><a href="#3-空格" class="headerlink" title="3. 空格"></a>3. 空格</h2><ul>
+<li>‘{‘前留一个空格</li>
+<li>‘:’后留一个空格</li>
+<li>句末不要留多余空格</li></ul>
+        
+          <a class="article-more-a" href="/2017/12/07/css编写规范/#more">more >></a>
         
       
 
@@ -377,19 +513,19 @@
 
 
   
-    <article id="post-css编写规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-git 工作流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/07/css编写规范/">css编写规范</a>
+      <a class="article-title" href="/2017/12/07/git 工作流/">git 工作流</a>
     </h1>
   
 
         
-        <a href="/2017/12/07/css编写规范/" class="archive-article-date">
+        <a href="/2017/12/07/git 工作流/" class="archive-article-date">
   	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
 </a>
         
@@ -397,18 +533,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-css选择器命名"><a href="#1-css选择器命名" class="headerlink" title="1. css选择器命名"></a>1. css选择器命名</h2><ul>
-<li>全英文小写（不要用中文拼音命名）</li>
-<li>使用中划线分割多单词的选择器名（.ui-element）</li>
-<li>禁止使用下划线</li>
+        <h1 id="GIT-工作流"><a href="#GIT-工作流" class="headerlink" title="GIT 工作流"></a>GIT 工作流</h1><h2 id="分支介绍"><a href="#分支介绍" class="headerlink" title="分支介绍"></a>分支介绍</h2><ul>
+<li>master: 存放已部署在生产环境的稳定代码，以tag标记版本节点。</li>
+<li>release: 发布分支，基于develop分支，用于体侧后修复bug，通常新功能不在此分支上开发。完成后合并到develp分支和master分支。</li>
+<li>develop: 不直接在该分支上进行开发，用来合并feature分支的代码</li>
 </ul>
-<h2 id="2-使用tab（4个空格）"><a href="#2-使用tab（4个空格）" class="headerlink" title="2. 使用tab（4个空格）"></a>2. 使用tab（4个空格）</h2><h2 id="3-空格"><a href="#3-空格" class="headerlink" title="3. 空格"></a>3. 空格</h2><ul>
-<li>‘{‘前留一个空格</li>
-<li>‘:’后留一个空格</li>
-<li>句末不要留多余空格</li></ul>
-        
-          <a class="article-more-a" href="/2017/12/07/css编写规范/#more">more >></a>
-        
+<h2 id="git完整工作流"><a href="#git完整工作流" class="headerlink" title="git完整工作流"></a>git完整工作流</h2><h3 id="正常流"><a href="#正常流" class="headerlink" title="正常流"></a>正常流</h3><ol>
+<li>接到版本需求</li>
+<li>新建featrue分支（以版本号命名分支），进入开发</li>
+<li>develop完成一个小功能，需合并到本地develop分支，再push到远程分支</li>
+<li>开发完成，准备体侧</li>
+<li>禁止feature分支提交代码，完成feature分支，合并代码到develop</li>
+<li>建立release分支（以版本号命名分支），在此分支上修复测试bug</li>
+<li>测试完成，发布版本</li>
+</ol>
+<h3 id="异常流"><a href="#异常流" class="headerlink" title="异常流"></a>异常流</h3><ol>
+<li>发现线上紧急bug</li>
+<li>从master检出release分支，在此分支上修复bug并提交测试</li>
+<li>测试完成，准备发布修复版本</li>
+<li>禁止release分支提交代码，完成release分支，将代码合并到develop分支和master分支，打上Tag</li>
+</ol>
+
       
 
       
@@ -509,75 +654,6 @@
 
 
   
-    <article id="post-文件与文件夹命名规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/07/文件与文件夹命名规范/">文件与文件夹命名规范</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/07/文件与文件夹命名规范/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="文件命名"><a href="#文件命名" class="headerlink" title="文件命名"></a>文件命名</h2><ul>
-<li>不能使用中文、数字（需要数字时用英文first、second字符代替）</li>
-<li>文件名使用全小写</li>
-<li>vue、css、jpg等图片格式多单词文件名使用中划线<code>&#39;-&#39;</code>分隔<br>  例如：follow-up-customer.vue、reset-common-style.css、radio-active.jpg</li>
-<li>js多单词文件名使用<code>&#39;.&#39;</code>分隔<br>  例如：build.systom.js</li>
-</ul>
-<h2 id="文件夹命名"><a href="#文件夹命名" class="headerlink" title="文件夹命名"></a>文件夹命名</h2><ul>
-<li>不能使用中文、数字（需要数字时用英文first、second字符代替）</li>
-<li>文件名使用全小写</li>
-<li>多单词分隔统一使用中划线命名</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-注释规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -607,84 +683,6 @@
         
           <a class="article-more-a" href="/2017/12/07/注释规范/#more">more >></a>
         
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-git 工作流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/07/git 工作流/">git 工作流</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/07/git 工作流/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="GIT-工作流"><a href="#GIT-工作流" class="headerlink" title="GIT 工作流"></a>GIT 工作流</h1><h2 id="分支介绍"><a href="#分支介绍" class="headerlink" title="分支介绍"></a>分支介绍</h2><ul>
-<li>master: 存放已部署在生产环境的稳定代码，以tag标记版本节点。</li>
-<li>release: 发布分支，基于develop分支，用于体侧后修复bug，通常新功能不在此分支上开发。完成后合并到develp分支和master分支。</li>
-<li>develop: 不直接在该分支上进行开发，用来合并feature分支的代码</li>
-</ul>
-<h2 id="git完整工作流"><a href="#git完整工作流" class="headerlink" title="git完整工作流"></a>git完整工作流</h2><h3 id="正常流"><a href="#正常流" class="headerlink" title="正常流"></a>正常流</h3><ol>
-<li>接到版本需求</li>
-<li>新建featrue分支（以版本号命名分支），进入开发</li>
-<li>develop完成一个小功能，需合并到本地develop分支，再push到远程分支</li>
-<li>开发完成，准备体侧</li>
-<li>禁止feature分支提交代码，完成feature分支，合并代码到develop</li>
-<li>建立release分支（以版本号命名分支），在此分支上修复测试bug</li>
-<li>测试完成，发布版本</li>
-</ol>
-<h3 id="异常流"><a href="#异常流" class="headerlink" title="异常流"></a>异常流</h3><ol>
-<li>发现线上紧急bug</li>
-<li>从master检出release分支，在此分支上修复bug并提交测试</li>
-<li>测试完成，准备发布修复版本</li>
-<li>禁止release分支提交代码，完成release分支，将代码合并到develop分支和master分支，打上Tag</li>
-</ol>
-
       
 
       
