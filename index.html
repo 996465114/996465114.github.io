@@ -6,15 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://996465114.github.io">
-  <title>outside blog</title>
+  <title>baoya blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="outside blog">
+<meta property="og:title" content="baoya blog">
 <meta property="og:url" content="http://996465114.github.io/index.html">
-<meta property="og:site_name" content="outside blog">
+<meta property="og:site_name" content="baoya blog">
 <meta property="og:locale" content="chinese">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="outside blog">
+<meta name="twitter:title" content="baoya blog">
   
   
     <link rel="icon" href="/favicon.png">
@@ -44,7 +44,7 @@
 			<img src="/img/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">姚伟勉</a></h1>
+		  <h1 class="header-author"><a href="/">BAOYA</a></h1>
 		</hgroup>
 		
 
@@ -84,7 +84,7 @@
 				<img src="/img/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">姚伟勉</h1>
+			  <h1 class="header-author js-header-author">BAOYA</h1>
 			</hgroup>
 			
 			
@@ -115,6 +115,69 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-javascript正则表达式去除多余空格" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/25/javascript正则表达式去除多余空格/">javascript正则表达式去除多余空格</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/25/javascript正则表达式去除多余空格/" class="archive-article-date">
+  	<time datetime="2017-12-25T11:59:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>现有一段字符串，字符串穿插着空格，空格可能在字符串的头部、尾部或者在中间，要求去除字符串中间的空格，首尾空格保留，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;  a b  a &apos; 处理后变为 &apos;  aba &apos;</span><br></pre></td></tr></table></figure></p>
+<p><br><br><strong>按照以前的做法，看到这种需求，第一反应就是使用javascript原生方法处理字符串</strong>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = str.split(<span class="regexp">/\w/</span>),</span><br><span class="line">    len = arr.length,</span><br><span class="line"></span><br><span class="line">    tempStr = str.replace(<span class="regexp">/\s*/g</span>, <span class="string">''</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;arr[<span class="number">0</span>]&#125;</span><span class="subst">$&#123;tempStr&#125;</span><span class="subst">$&#123;arr[len - <span class="number">1</span>]&#125;</span>`</span>);</span><br></pre></td></tr></table></figure></p>
+<p>先将字符串基于字母分隔成不同长度的字符串数组，这样就可以取得字符串首尾的空格，然后保存在<code>arr</code>里，再将原本的字符串所有空格去掉，最后拼接首尾空格就得到想要的效果了。</p>
+        
+          <a class="article-more-a" href="/2017/12/25/javascript正则表达式去除多余空格/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-vue调用子组件方法，ref与props传值触发watch调用方法之间哪个性能更优" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -442,6 +505,69 @@
 
 
   
+    <article id="post-javascript编写规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/07/javascript编写规范/">javascript编写规范</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/07/javascript编写规范/" class="archive-article-date">
+  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-使用驼峰式变量命名、属性"><a href="#1-使用驼峰式变量命名、属性" class="headerlink" title="1. 使用驼峰式变量命名、属性"></a>1. 使用驼峰式变量命名、属性</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> addTab = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="2-常量采用全大写，用下划线“-”作为单词分割"><a href="#2-常量采用全大写，用下划线“-”作为单词分割" class="headerlink" title="2. 常量采用全大写，用下划线“_”作为单词分割"></a>2. 常量采用全大写，用下划线“_”作为单词分割</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> TABLE_WIDTH = <span class="number">120</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="3-总是使用分号-句末习惯性加上分号"><a href="#3-总是使用分号-句末习惯性加上分号" class="headerlink" title="3. 总是使用分号,句末习惯性加上分号"></a>3. 总是使用分号,句末习惯性加上分号</h2>
+        
+          <a class="article-more-a" href="/2017/12/07/javascript编写规范/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-eslint配置与使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -591,69 +717,6 @@
 
 
   
-    <article id="post-javascript编写规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/07/javascript编写规范/">javascript编写规范</a>
-    </h1>
-  
-
-        
-        <a href="/2017/12/07/javascript编写规范/" class="archive-article-date">
-  	<time datetime="2017-12-07T09:02:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-使用驼峰式变量命名、属性"><a href="#1-使用驼峰式变量命名、属性" class="headerlink" title="1. 使用驼峰式变量命名、属性"></a>1. 使用驼峰式变量命名、属性</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> addTab = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="2-常量采用全大写，用下划线“-”作为单词分割"><a href="#2-常量采用全大写，用下划线“-”作为单词分割" class="headerlink" title="2. 常量采用全大写，用下划线“_”作为单词分割"></a>2. 常量采用全大写，用下划线“_”作为单词分割</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> TABLE_WIDTH = <span class="number">120</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="3-总是使用分号-句末习惯性加上分号"><a href="#3-总是使用分号-句末习惯性加上分号" class="headerlink" title="3. 总是使用分号,句末习惯性加上分号"></a>3. 总是使用分号,句末习惯性加上分号</h2>
-        
-          <a class="article-more-a" href="/2017/12/07/javascript编写规范/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-注释规范" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -730,7 +793,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 姚伟勉
+    		&copy; 2017 BAOYA
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

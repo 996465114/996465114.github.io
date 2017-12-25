@@ -6,30 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://996465114.github.io">
-  <title>element-ui组件el-tabs导致的tab渲染错乱-原因探索 | baoya blog</title>
+  <title>javascript正则表达式去除多余空格 | baoya blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="不知道有没有人跟我有同样的遭遇，使用element-ui插件中的el-tabs组件实现多tab窗口，每个tab页签代表一个单独的id，对tab页签进行删除动作时，导致id错乱。 我们系统因业务的特殊性，需要做成多tab页签的形式。刚好element-ui中el-tabs可以满足这种需求。实现这种多tabs的代码如下.每选中菜单就会多增加一个tab，tab也可以进行删除操作，点击切换操作。同时，每个">
+  <meta name="description" content="现有一段字符串，字符串穿插着空格，空格可能在字符串的头部、尾部或者在中间，要求去除字符串中间的空格，首尾空格保留，例如：1&amp;apos;  a b  a &amp;apos; 处理后变为 &amp;apos;  aba &amp;apos; 按照以前的做法，看到这种需求，第一反应就是使用javascript原生方法处理字符串。123456let arr = str.split(/\w/),    len = arr.len">
 <meta property="og:type" content="article">
-<meta property="og:title" content="element-ui组件el-tabs导致的tab渲染错乱-原因探索">
-<meta property="og:url" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/index.html">
+<meta property="og:title" content="javascript正则表达式去除多余空格">
+<meta property="og:url" content="http://996465114.github.io/2017/12/25/javascript正则表达式去除多余空格/index.html">
 <meta property="og:site_name" content="baoya blog">
-<meta property="og:description" content="不知道有没有人跟我有同样的遭遇，使用element-ui插件中的el-tabs组件实现多tab窗口，每个tab页签代表一个单独的id，对tab页签进行删除动作时，导致id错乱。 我们系统因业务的特殊性，需要做成多tab页签的形式。刚好element-ui中el-tabs可以满足这种需求。实现这种多tabs的代码如下.每选中菜单就会多增加一个tab，tab也可以进行删除操作，点击切换操作。同时，每个">
+<meta property="og:description" content="现有一段字符串，字符串穿插着空格，空格可能在字符串的头部、尾部或者在中间，要求去除字符串中间的空格，首尾空格保留，例如：1&amp;apos;  a b  a &amp;apos; 处理后变为 &amp;apos;  aba &amp;apos; 按照以前的做法，看到这种需求，第一反应就是使用javascript原生方法处理字符串。123456let arr = str.split(/\w/),    len = arr.len">
 <meta property="og:locale" content="chinese">
-<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/3.png">
-<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/1.png">
-<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/2.png">
-<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/4.png">
-<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/5.png">
-<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/6.png">
-<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/10.png">
-<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/7.png">
-<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/8.png">
-<meta property="og:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/9.png">
-<meta property="og:updated_time" content="2017-12-13T11:51:44.873Z">
+<meta property="og:updated_time" content="2017-12-25T12:54:34.276Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="element-ui组件el-tabs导致的tab渲染错乱-原因探索">
-<meta name="twitter:description" content="不知道有没有人跟我有同样的遭遇，使用element-ui插件中的el-tabs组件实现多tab窗口，每个tab页签代表一个单独的id，对tab页签进行删除动作时，导致id错乱。 我们系统因业务的特殊性，需要做成多tab页签的形式。刚好element-ui中el-tabs可以满足这种需求。实现这种多tabs的代码如下.每选中菜单就会多增加一个tab，tab也可以进行删除操作，点击切换操作。同时，每个">
-<meta name="twitter:image" content="http://996465114.github.io/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/3.png">
+<meta name="twitter:title" content="javascript正则表达式去除多余空格">
+<meta name="twitter:description" content="现有一段字符串，字符串穿插着空格，空格可能在字符串的头部、尾部或者在中间，要求去除字符串中间的空格，首尾空格保留，例如：1&amp;apos;  a b  a &amp;apos; 处理后变为 &amp;apos;  aba &amp;apos; 按照以前的做法，看到这种需求，第一反应就是使用javascript原生方法处理字符串。123456let arr = str.split(/\w/),    len = arr.len">
   
   
     <link rel="icon" href="/favicon.png">
@@ -129,46 +118,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-element-ui组件el-tabs导致的tab渲染错乱-原因探索" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-javascript正则表达式去除多余空格" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      element-ui组件el-tabs导致的tab渲染错乱-原因探索
+      javascript正则表达式去除多余空格
     </h1>
   
 
         
-        <a href="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/" class="archive-article-date">
-  	<time datetime="2017-12-13T06:52:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-13</time>
+        <a href="/2017/12/25/javascript正则表达式去除多余空格/" class="archive-article-date">
+  	<time datetime="2017-12-25T11:59:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>不知道有没有人跟我有同样的遭遇，使用element-ui插件中的el-tabs组件实现多tab窗口，每个tab页签代表一个单独的id，对tab页签进行删除动作时，导致id错乱。</p>
-<p>我们系统因业务的特殊性，需要做成多tab页签的形式。刚好element-ui中el-tabs可以满足这种需求。实现这种多tabs的代码如下.<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/3.png" alt=""><br>每选中菜单就会多增加一个tab，tab也可以进行删除操作，点击切换操作。同时，每个tab页签的内容部分有使用相同组件的情况.<br><a id="more"></a></p>
-<p>例如：<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/1.png" alt=""><br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/2.png" alt=""><br>以上两个图片，都是使用相同的FollowUp组件.</p>
-<p>问题就发生在，当我删除id为107560489的tab时，发生了id错乱的异常.<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/4.png" alt=""></p>
-<p>红框的id值竟然没有对应变化，本来要删除id为107560489的tab页签,却删除成id为7146246的tab页签内容.</p>
-<p>经过多组测试，我发现每次对使用相同组件的tab页签进行删除动作，都会删除掉最后一个tab对应的dom节点.</p>
-<p>这个异常困扰了我很久，网上也找了很多资料，做了各种假设。最后问题的解决方法也很简单，就是在el-tab-pane节点里加上属性<code>:key=&quot;item.title&quot;</code>,给每个tab加上唯一标识，就解决了这个问题。如图红框<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/5.png" alt=""></p>
-<p><br><br><strong>问题虽然解决了，但我还是不甘心，不止步于单纯的解决问题.<br>好奇心驱动我去看vue的源码，找出导致错乱的原因.</strong></p>
-<p><br></p>
-<h3 id="el-tab-pane没有添加-key。"><a href="#el-tab-pane没有添加-key。" class="headerlink" title="el-tab-pane没有添加:key。"></a>el-tab-pane没有添加:key。</h3><p>当点击tab关闭按钮后，vue需要将相应视图从dom节点移除，首先vue会对虚拟节点进行比较.<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/6.png" alt=""><br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/10.png" alt=""><br>oldCh代表未删除前的节点，有三个tab，分别代表<code>客户管理</code>,<code>客户跟进107560489</code>,<code>客户跟进7146246</code>.<br>newCh也即删除后重新构建的虚拟节点，有两个tab，分别代表<code>客户管理</code>,<code>客户跟进7146246</code>.</p>
-<p><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/7.png" alt=""><br>可以看到，此时每个vnode节点中的key值为undefined</p>
-<p><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/8.png" alt=""><br>然后对vnode节点进行比较，图片中<code>1</code>是:使用oldCh跟newCh两个数组的开始节点index递增进行比较，当比较的过程中发现有不同的vnode，那么将换用图中<code>2</code>的方式进行比较，<code>2</code>是将比较顺序换成从数组的结尾index递减比较.</p>
-<p>这也很好理解,假设能正确的删除<code>107560489</code>对应的dom节点,那步骤将会如下：<br>oldCh[0] <code>客户管理</code> === newCh[0] <code>客户管理</code><br>oldCh[1] <code>107560489</code> !== newCh[1] <code>7146246</code><br>oldCh[2] <code>7146246</code> === newCh[1] <code>7146246</code></p>
-<p>但是实际上执行的过程是这样的<br>oldCh[0] <code>客户管理</code> === newCh[0] <code>客户管理</code><br>oldCh[1] <code>107560489</code> === newCh[1] <code>7146246</code><br>果然，问题就发生在这里，oldCh[1]与newCh[1]相等，那oldCh[2]将会被dom节点遗弃，错误的将<code>7146246</code>对应dom节点删除.</p>
-<h5 id="为什么两个不同tab页签的vnode节点会相等？"><a href="#为什么两个不同tab页签的vnode节点会相等？" class="headerlink" title="为什么两个不同tab页签的vnode节点会相等？"></a>为什么两个不同tab页签的vnode节点会相等？</h5><p>这就要从用来比较vnode的函数入手，于是我找到vue中sameVnode函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sameVnode</span>(<span class="params">vnode1, vnode2</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        vnode1.key === vnode2.key &amp;&amp;</span><br><span class="line">        vnode1.tag === vnode2.tag &amp;&amp;</span><br><span class="line">        vnode1.isComment === vnode2.isComment &amp;&amp;</span><br><span class="line">        !vnode1.data === !vnode2.data</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>很明显，当key值没有设置，使用FollowUp组件的tab页签，tag、isComment、data也是相同的，所以导致oldCh[1] <code>107560489</code> === newCh[1] <code>7146246</code>成立，sameVnode返回true，最后酿成删除错误节点的情况。当然，我也做了一次添加key的比较.</p>
-<p><br></p>
-<h3 id="el-tab-pane添加-key。"><a href="#el-tab-pane添加-key。" class="headerlink" title="el-tab-pane添加:key。"></a>el-tab-pane添加:key。</h3><p>打印oldCh和newCh的虚拟节点<br><img src="/2017/12/13/element-ui组件el-tabs导致的tab渲染错乱-原因探索/9.png" alt=""><br><code>key: &quot;跟进客户109160187&quot;</code><br>添加了key后，再调用sameVnode<br>oldCh[1] <code>107560489</code>跟newCh[1] <code>7146246</code>就不会相等了.</p>
-<p><strong>另外，为for循环添加key值可以提升操作列表时候渲染dom的性能
-</strong></p>
+        <p>现有一段字符串，字符串穿插着空格，空格可能在字符串的头部、尾部或者在中间，要求去除字符串中间的空格，首尾空格保留，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;  a b  a &apos; 处理后变为 &apos;  aba &apos;</span><br></pre></td></tr></table></figure></p>
+<p><br><br><strong>按照以前的做法，看到这种需求，第一反应就是使用javascript原生方法处理字符串</strong>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = str.split(<span class="regexp">/\w/</span>),</span><br><span class="line">    len = arr.length,</span><br><span class="line"></span><br><span class="line">    tempStr = str.replace(<span class="regexp">/\s*/g</span>, <span class="string">''</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;arr[<span class="number">0</span>]&#125;</span><span class="subst">$&#123;tempStr&#125;</span><span class="subst">$&#123;arr[len - <span class="number">1</span>]&#125;</span>`</span>);</span><br></pre></td></tr></table></figure></p>
+<p>先将字符串基于字母分隔成不同长度的字符串数组，这样就可以取得字符串首尾的空格，然后保存在<code>arr</code>里，再将原本的字符串所有空格去掉，最后拼接首尾空格就得到想要的效果了。</p>
+<a id="more"></a>
+<p><br><br><strong>上面的做法，太多中间变量，占用存储容量也大。如果使用正则表达式处理会更加简洁</strong>。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.replace(<span class="regexp">/([^\s])\s*(?=[^\s])/g</span>, <span class="string">'$1'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>一行代码就够了，哈哈，果然更加简洁了。<br>如果要保留首尾空格，那要捕捉的字符串模式无外乎 （字母 + 空格 + 字母）或者 （字母 + 多个空格 + 字母）, 捕捉到这个的模式之后就可以轻松的去除中间的空格。用<code>不捕获匹配</code>匹配可以轻松的匹配出这样的模式，然后将<code>([^\s])\s</code>替换成[^\s]， 这里[^\s]表示非空格。</p>
+<p>正则表达式写起来简洁，并且性能更好。至于正则比原生方法更快捷的说法，空口无凭，我做了一个demo测试了两者的性能。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">' '</span>,</span><br><span class="line">    arr = [<span class="string">' '</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'ab'</span>];</span><br><span class="line"><span class="comment">// 随机生成N个字符串</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt;= <span class="number">10</span>; i++) &#123;</span><br><span class="line">    str += arr[~~(<span class="built_in">Math</span>.random() * <span class="number">4</span>)];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">str = str + <span class="string">' '</span>; <span class="comment">// 生成的字符串首尾至少都有一个空格</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">method1</span> (<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = str.split(<span class="regexp">/\w/</span>),</span><br><span class="line">        len = arr.length,</span><br><span class="line"></span><br><span class="line">        tempStr = str.replace(<span class="regexp">/\s*/g</span>, <span class="string">''</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="string">`<span class="subst">$&#123;arr[<span class="number">0</span>]&#125;</span><span class="subst">$&#123;tempStr&#125;</span><span class="subst">$&#123;arr[len - <span class="number">1</span>]&#125;</span>`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">method2</span> (<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> str.replace(<span class="regexp">/([^\s])\s*(?=[^\s])/g</span>, <span class="string">'$1'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.time(<span class="string">'method1'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(method1(str));</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'method1'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.time(<span class="string">'method2'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(method2(str));</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'method2'</span>);</span><br></pre></td></tr></table></figure></p>
+<p><code>(基于chrome)</code>，上面for循环的i分别使用了10，100，1000，10000打印后时间如下</p>
+<ul>
+<li><p>i = 10<br>method1: 1.42724609375ms<br>method2: 0.115966796875ms</p>
+</li>
+<li><p>i = 100<br>method1: 1.708251953125ms<br>method2: 0.171142578125ms</p>
+</li>
+<li><p>i = 1000<br>method1: 1.602783203125ms<br>method2: 0.216064453125ms</p>
+</li>
+<li><p>i = 10000<br>method1: 5.887939453125ms<br>method2: 0.8408203125ms</p>
+</li>
+</ul>
+<p><strong>对比后，发现正则耗费的时间更少，性能更优</strong>。</p>
 
       
 
@@ -190,18 +178,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/12/18/vue调用子组件方法，ref与props传值触发watch调用方法之间哪个性能更优/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          vue调用子组件方法，&#39;ref&#39;与&#39;props&#39;之间哪个性能更优
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/12/10/前端异常监控/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">前端异常监控</div>
+    <a href="/2017/12/18/vue调用子组件方法，ref与props传值触发watch调用方法之间哪个性能更优/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue调用子组件方法，&#39;ref&#39;与&#39;props&#39;之间哪个性能更优</div>
       <i class="icon-circle-right"></i>
     </a>
   
